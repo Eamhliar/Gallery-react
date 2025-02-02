@@ -1,6 +1,6 @@
 
 //import { Link , useNavigate } from "react-router-dom";
-import Carousel from "./Carousel";
+import Carousel from "../components/Carousel";
 
 function HomePage() {
    // const navigate = useNavigate();

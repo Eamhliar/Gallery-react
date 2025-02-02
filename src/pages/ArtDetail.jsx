@@ -13,9 +13,6 @@ function ArtDetail() {
     
     return (
         <>
-         
-        
-     
             <div className={classes.details} >
               <h1>About this artwork</h1>
                  <h2>Τίτλος: {`"${currArtwork.title}"`}</h2>
@@ -24,14 +21,10 @@ function ArtDetail() {
                  <p> Υλικά: {currArtwork.description.materials}</p>
                  <p> Ημερομηνία: {currArtwork.description.date}</p>
                  <motion.button
-                 whileHover={{scale:1.1, backgroundColor:'#3c5d51' }}
-                 transition={{ type: 'spring', stiffness: 500, mass: 1}}
+                 whileHover={{scale:1.1, backgroundColor:'#324d43' }}
+                 transition={{ type: 'spring', stiffness: 200, mass: 1}}
                  > <Link to=".." relative="path">Back</Link> </motion.button>
             </div>
-        
-        
-       
-         
         </>
     );
 }

@@ -1,3 +1,5 @@
+import {motion} from 'framer-motion';
+
 function ErrorPage() {
     return (
         <>
@@ -9,7 +11,10 @@ function ErrorPage() {
             alignItems: "center"
         }}>
             <h1>An error occured!</h1>
-            <p >This page not found</p>
+            <motion.p
+            initial={{y: 500, opacity: 0}} 
+            animate={{y: 0, opacity: 1, duration: 3}}
+            >This page not found</motion.p>
         </main>
         </>
     );

@@ -13,10 +13,14 @@
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
+.details h1{
+    letter-spacing: .7rem;
+}
 .details h2{
+    font-size: 2rem;
     font-weight: lighter;
     font-style: italic;
-    color:  rgb(41, 53, 48);
+    color:  hsl(155, 13%, 50%);
 }
 .details p{
     margin-top: 0;
@@ -26,16 +30,18 @@
     box-shadow: (0 0 5px 10px rgba(0, 0, 0, 0.8));
 }
 .details button{
+    font-size: 1 rem;
     margin-top: 2rem;
     background-color: hsl(158, 21%, 20%);
     border: none;
     border-radius: 5px;
-    padding: 10px 25px;
-    /*filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.8));*/
+    padding: 10px 15px;
+    box-shadow: 0 0  8px rgba(0, 0, 0, 0.4);
+   /* background-color: #324d43; */
 
 }
 .details a {
-    color:rgb(132, 172, 150);
+    color:rgb(138, 153, 118);
     font-weight: lighter;
     text-decoration: none;
 }

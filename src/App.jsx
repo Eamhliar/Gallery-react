@@ -1,12 +1,12 @@
 import React from 'react';
 //import { NavLink } from 'react-router-dom';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import ArtDetail from './components/ArtDetail';
-import Artworks from './components/Artworks';
-import Bio from './components/Bio';
-import ErrorPage from './components/ErrorPage';
-import HomePage from './components/Home';
-import RootLayout from './components/RootLayout';
+import ArtDetail from './pages/ArtDetail';
+import Artworks from './pages/Artworks';
+import Bio from './pages/Bio';
+import ErrorPage from './pages/ErrorPage';
+import HomePage from './pages/Home';
+import RootLayout from './pages/RootLayout';
 
 
 const router = createBrowserRouter([
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <HomePage /> },
+      { index: true, element: <HomePage /> },     // note: (index: true <=> path:'')
       { path: 'artworks', element: <Artworks /> },
       { path: 'artworks/:artId', element: <ArtDetail />},
       { path: 'bio', element: <Bio />}

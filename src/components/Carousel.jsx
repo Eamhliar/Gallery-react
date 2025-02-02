@@ -9,135 +9,90 @@ import classes from './Carousel.module.css'
 import {motion, useMotionValue, useMotionValueEvent} from 'framer-motion';
 //import { div } from 'framer-motion/client';
 import { useState, useEffect } from 'react';
-import { use } from 'framer-motion/client';
+//import { use } from 'framer-motion/client';
 
 const CAROUSEL = [april, kalamies, rodo, rodi, detis, ruinsImg];
-const ONE_SECOND = 1000;
-const AUTO_DELAY = ONE_SECOND * 5;
-const DRAG_BUFFER = 50;
-
 
 export default function Carousel() {
   const [imgIndex, setImgIndex] = useState(0);
-  const [dragging, setDragging] = useState(false);
-
-  const dragX = useMotionValue(0);
-  const dragXProgress = useMotionValue(0);
-
-  useMotionValueEvent(dragX, "change", (latest) => {
-    if(typeof latest === "number" && dragging){
-      dragXProgress.set(latest);
-    } else {
-      dragXProgress.set(0);
-    }
-  })
+  const [autoPlay, setAutoPlay] = useState(true);
+  let timeOut = null;
 
   useEffect(() => {
-    const intervalRef = setInterval(() => {
-      const x = dragXProgress.get();
+    timeOut = autoPlay &&
+      setTimeout(() => {
+        slideRight();
+      }, 5000);
+  });
 
-      if (x === 0) {
-        setImgIndex((pv) => {
-          if (pv === CAROUSEL.length - 1) {
-            return 0;
-          }
-          return pv + 1;
-        });
-      }
-    }, AUTO_DELAY);
-
-    return () => clearInterval(intervalRef);
-  }, []);
-
-  function onDragStart() {
-    setDragging(true);
-  }
-
-  function onDragEnd() {
-    setDragging(false);
-     const x = dragX.get();
-
-    if (x <= -DRAG_BUFFER && imgIndex < CAROUSEL.length - 1) {
-      setImgIndex((pv) => pv + 1);
-    } else if (x >= DRAG_BUFFER && imgIndex > 0) {
-      setImgIndex((pv) => pv - 1);
-    }
+  const slideRight = () => {
+    setImgIndex(imgIndex === CAROUSEL.length - 1 ? 0 : imgIndex + 1);
   };
 
- 
-  
-  
+  const slideLeft = () => {
+    setImgIndex(imgIndex === 0 ? CAROUSEL.length - 1 : imgIndex - 1);
+  };
+  console.log(imgIndex);
 
 
-    return(
-        <div 
-        className={classes.container}
-          style={{
-             
-              x: dragX,
-          }}> 
-            <motion.div
-               drag="x"
-               dragConstraints={{
-                  left: 0,
-                  right: 0
-                }}
-               animate={{
-                  translateX: `-${imgIndex * 100}%`
-                }}
-                onDragStart={onDragStart}
-                onDragEnd={onDragEnd}
-                className={classes.carousel}>
-                  <ImageSlider  imgIndex={imgIndex}/>
-            </motion.div>
-                <ImageDots imgIndex={imgIndex} setImgIndex={setImgIndex} />
+
+  return (
+    <div
+      className={classes.carousel}
+      onMouseEnter={() => {
+        setAutoPlay(false);
+        clearTimeout(timeOut);
+      }}
+      onMouseLeave={() => {
+        setAutoPlay(true);
+      }}
+    >
+      <div className={classes.carousel_wrapper}>
+        {CAROUSEL.map((imgSrc, index) => {
+          return (
+            /* (condition) ? true : false */
+
+            <div
+              key={index}
+              className={
+                index === imgIndex
+                  ? `${classes.carousel_card}  ${classes.carousel_card_active}`
+                  : classes.carousel_card
+              }
+            >
+              <img className={classes.card_image} src={imgSrc} alt="" />
+          
+            </div>
+          );
+        })}
+        <motion.div
+        whileHover={{scale:1.1, backgroundColor:'#324d43' }}
+         className={classes.carousel_arrow_left}
+         onClick={slideLeft}>
+          &lsaquo;
+        </motion.div>
+        <motion.div
+        whileHover={{scale:1.2}}
+         className={classes.carousel_arrow_right}
+         onClick={slideRight}>
+          &rsaquo;
+        </motion.div>
+        <div className={classes.carousel_pagination}>
+          {CAROUSEL.map((_, index) => {
+            return (
+              <div
+                key={index}
+                className={
+                  index == imgIndex
+                    ? `${classes.pagination_dot} ${classes.pagination_dot_active}`
+                    : classes.pagination_dot
+                }
+                onClick={() => setImgIndex(index)}
+              ></div>
+            );
+          })}
         </div>
-    )
-}
-
-
-
-const ImageSlider = ({ imgIndex }) => {
-    return (
-      <>
-        {CAROUSEL.map((imgSrc, idx) => {
-          return (
-            <motion.div
-              key={idx}
-              style={{
-                backgroundImage: `url(${imgSrc})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-              animate={{
-                scale: imgIndex === idx ? 0.95 : 0.85,
-                opacity: imgIndex === idx ? 1 : 0.75
-              }}
-              transition={{
-                type: "spring",
-                mass: 1,
-                stiffness: 300,
-              }}
-              className={classes.imageSlider}
-            />
-          );
-        })}
-      </>
-    );
-  };
-
-  const ImageDots =  ({ imgIndex, setImgIndex }) => {
-    return (
-      <div className={classes.dots}>
-        {CAROUSEL.map((_, idx) => {
-          return (
-            <button
-              key={idx}
-              onClick={() => setImgIndex(idx)}
-              className={idx === imgIndex ? classes.dotBtn : classes.dotBtnInactive}
-            />
-          );
-        })}
       </div>
-    );
+    </div>
+  );
   };
