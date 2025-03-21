@@ -7,13 +7,13 @@
 
 .carousel {
     display: flex;
-   
     aspect-ratio: 4.2/3;
     max-width: 580px;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     position: relative;
+    
   }
   
   .carousel_wrapper {
@@ -23,6 +23,7 @@
     height: 100%;
     border-radius: 0;
     margin: 0 auto;
+    
   }
   
   .carousel_card {
@@ -44,7 +45,8 @@
     transform: scale(1);
     pointer-events: visible;
     border: 40px solid rgb(192, 181, 168);
-    outline: 9px solid rgb(32, 25, 20);
+    outline: 9px solid rgb(53, 38, 28);
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.589);
   }
   
   .card_image {
@@ -70,35 +72,36 @@
   .carousel_arrow_left,
   .carousel_arrow_right {
     position: absolute;
-    font-size: 40px;
+    margin: 0;
     top: 50%;
     transform: translate(0, -50%);
-    color: #112a49;
-    background-color: rgb(146, 194, 124);
+    color: hsl(161, 64%, 15%);
+    background-color: rgba(0, 0, 0, 0.200);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    padding-bottom: 9px;
+    width: 2rem;
+    height: 0%;
+    border-radius: 5px;
+    padding: 0;
     cursor: pointer;
+    font-size: 3rem;
   }
   
   .carousel_arrow_left {
-    left: -50px;
+    left: -40px;
     padding-right: 3px;
   }
   
   .carousel_arrow_right {
-    right: -50px;
+    right: -40px;
     padding-left: 3px;
   }
   
   .carousel_pagination {
     position: absolute;
     bottom: -35px;
-    left: 50%;
+    left: 49%;
     transform: translate(-50%, 0);
   
   }
@@ -111,13 +114,14 @@
     display: inline-block;
     margin-left: 10px;
     cursor: pointer;
-    box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.048);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
   }
   
-  .pagination_dot:hover {
+  .pagination_dot:hover,
+  .pagination_dot:focus-visible {
     transform: scale(1.2);
   }
   
   .pagination_dot_active {
-    background-color: rgba(109, 218, 158, 0.521);
+    background-color:  hsl(161, 64%, 15%);
   }

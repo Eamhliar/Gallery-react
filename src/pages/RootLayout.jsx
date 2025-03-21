@@ -18,7 +18,6 @@ function RootLayout() {
         }}>
         <Outlet />
         </motion.main>
-        
         </>
     ) 
 }

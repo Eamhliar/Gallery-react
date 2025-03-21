@@ -28,11 +28,16 @@ html {
 body {
   margin: 0;
   padding: 2rem;
-  background-image: radial-gradient( #3e4434 , #5A6C57 );
+  padding-bottom: .5rem;
+  background-image: linear-gradient(to bottom right, #a8afaf,  #728a89 , rgb(73, 77, 75) );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 500%;
+  animation: bg-animation 25s infinite alternate;
   /*background-image: url(../public/backGround2.jpg);*/
 }
 
-h1 {
+h1, h2 {
   text-align: center;
   margin: 0;
   letter-spacing: 1rem;
@@ -130,5 +135,14 @@ h1 {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes bg-animation{
+  0% {
+
+    background-position: top left;
+  }
+  100%{
+    background-position: bottom right;
   }
 }

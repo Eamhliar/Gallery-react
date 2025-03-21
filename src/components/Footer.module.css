@@ -1,0 +1,16 @@
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: .6rem;
+    color:  hsl(161, 64%, 15%);
+    font-weight: light;
+    margin-top: 3rem;
+}
+
+p{
+    margin: 0;
+    font-style: normal;
+}

@@ -1,8 +1,8 @@
 .art_category {
     max-width: 85rem;
-    margin: 2rem auto;
-    padding: 1rem;
-    border: 2px solid #112a49;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    border: 4px solid   hsl(17, 19%, 15%);
     border-radius: 8px;
   }
   
@@ -16,16 +16,12 @@
     text-align: center;
   }
   
-  .fallback-text {
-    text-align: center;
-  }
-  
   .artworks {
     max-width: 80rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
     grid-gap: 2rem;
-    margin: 2rem auto;
+    margin: 0 auto;
     padding: 0;
     list-style: none;
   }
@@ -62,7 +58,7 @@
   
   
   .art_item img {
-    max-width: 400px;
+    max-width: 380px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -76,18 +72,24 @@
     font-weight: normal;
     font-size: 0.9rem;
     position: absolute;
-    bottom: 0;
-    right: 1rem;
+    top: 0%;
+    right: 5%;
     margin: 1rem auto;
    
   }
   
   .art_item h3 > a {
     text-decoration: none;
-    color: #804242;
-    background-color: #feee86;
+    color:  hsl(161, 62%, 15%);
+    background-color: #a4c2b9;
     border-radius: 4px;
     padding: 0.15rem 0.35rem;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   }
-  
+  .update {
+    display: flex;
+    justify-content: center;
+    font-size: .6rem;
+    color:  hsl(161, 62%, 15%);
+    margin-top: 2rem;
+  }

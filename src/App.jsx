@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ArtDetail from './pages/ArtDetail';
 import Artworks from './pages/Artworks';
 import Bio from './pages/Bio';
+import Contact from './pages/Contact';
 import ErrorPage from './pages/ErrorPage';
 import HomePage from './pages/Home';
 import RootLayout from './pages/RootLayout';
@@ -18,7 +19,8 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage /> },     // note: (index: true <=> path:'')
       { path: 'artworks', element: <Artworks /> },
       { path: 'artworks/:artId', element: <ArtDetail />},
-      { path: 'bio', element: <Bio />}
+      { path: 'bio', element: <Bio />},
+      { path: 'contact', element: <Contact/>}
     ]
   }
 ])

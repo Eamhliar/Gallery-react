@@ -6,13 +6,13 @@ import classes from './Artworks.module.css';
 
 
 export default function Artworks() {
-    
+  const lastUpdate = document.lastModified;
   return (
     <div className={classes.art_category}>
   
       <motion.ul 
       variants={{
-        visible: { transition: { staggerChildren: 1} }
+        visible: { transition: { staggerChildren: 2} }
       }}
       className={classes.artworks}>
         {ARTWORKS.map((art) => (
@@ -34,6 +34,9 @@ export default function Artworks() {
           </motion.li>
         ))}
       </motion.ul>
+      <div className={classes.update}> 
+            Τελευταία ενημέρωση: {lastUpdate}
+      </div>
     </div>
   );
 };

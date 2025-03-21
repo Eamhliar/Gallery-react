@@ -1,0 +1,53 @@
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    color: hsl(161, 62%, 15%) ;
+    background-image: linear-gradient(to bottom right, #a8afaf,  #728a89 , rgb(73, 77, 75) );
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 2rem 4rem;
+    border: 3px groove hsl(158, 21%, 20%);
+    box-shadow: 8px 8px 30px black;
+    background-size: 400%;
+    animation: bg-animation 5s infinite alternate;
+    position: relative;
+}
+
+.contact h2{
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 5px;
+}
+ .contact p{
+    display: inline-flex;
+    padding: .5rem 2rem;
+    margin: 0;
+ }
+ .contact a{
+    text-decoration: none;
+    color:  hsl(161, 62%, 15%);
+ }
+ .icon {
+    margin-right: 1rem;
+ }
+ .contact img{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    margin: 0%;
+ }
+
+
+ @keyframes bg-animation{
+    0% {
+  
+      background-position: top left;
+    }
+    100%{
+      background-position: bottom right;
+    }
+  }

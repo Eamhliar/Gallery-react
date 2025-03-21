@@ -4,6 +4,7 @@ import rodo from '../assets/Rose eclipse.jpg';
 import rodi from '../assets/Pomegranate.jpg';
 import detis from '../assets/Detis.jpg';
 import ruinsImg from '../assets/Ruins and roses.jpg';
+import dream from '../assets/Dream1.jpg';
 //import ImageSlider from './2';
 import classes from './Carousel.module.css'
 import {motion, useMotionValue, useMotionValueEvent} from 'framer-motion';
@@ -11,7 +12,10 @@ import {motion, useMotionValue, useMotionValueEvent} from 'framer-motion';
 import { useState, useEffect } from 'react';
 //import { use } from 'framer-motion/client';
 
-const CAROUSEL = [april, kalamies, rodo, rodi, detis, ruinsImg];
+import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
+import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
+
+const CAROUSEL = [april, kalamies, rodo, rodi, detis, ruinsImg, dream];
 
 export default function Carousel() {
   const [imgIndex, setImgIndex] = useState(0);
@@ -66,16 +70,20 @@ export default function Carousel() {
           );
         })}
         <motion.div
-        whileHover={{scale:1.1, backgroundColor:'#324d43' }}
+         whileHover={{scale: 1.45, x:-10}}
+         whileFocus={{scale: 1.45, x:-10}}
+        
          className={classes.carousel_arrow_left}
+         aria-label='See previous image'
          onClick={slideLeft}>
-          &lsaquo;
+          <ArrowBackIosNewOutlinedIcon />
         </motion.div>
         <motion.div
-        whileHover={{scale:1.2}}
+        whileHover={{scale:1.45, x:10}}
          className={classes.carousel_arrow_right}
+           aria-label='See next image'
          onClick={slideRight}>
-          &rsaquo;
+          <ArrowForwardIosOutlinedIcon />
         </motion.div>
         <div className={classes.carousel_pagination}>
           {CAROUSEL.map((_, index) => {
@@ -88,6 +96,7 @@ export default function Carousel() {
                     : classes.pagination_dot
                 }
                 onClick={() => setImgIndex(index)}
+                aria-label={`You are at the image {index+1}`}
               ></div>
             );
           })}

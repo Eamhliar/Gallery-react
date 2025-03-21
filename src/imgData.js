@@ -15,7 +15,12 @@ import footprints from './assets/Footprints.jpg';
 import rodi from './assets/Pomegranate.jpg';
 import rodo from './assets/Rose eclipse.jpg';
 import south from './assets/South.jpg';
-
+import dancers from './assets/Cloud dancers.jpg';
+import kastri from './assets/kastri.jpg';
+import moody from './assets/Moody medow.jpg';
+import vigla from './assets/vigla.jpg';
+import gold from './assets/Golden.jpg'
+import forest from './assets/Autumn forest.jpg';
 
 
 export const ARTWORKS = [
@@ -38,7 +43,7 @@ export const ARTWORKS = [
     title: 'Απρίλης',
     image: {
       src: april,
-      alt: 'A view to my village in April.',
+      alt: 'A pastel painting with a view of my village Kato Viannos in April.',
     },
     description: {
       dimensions: '42x29.7cm',
@@ -51,7 +56,7 @@ export const ARTWORKS = [
     title: 'Καρκαδιώτισσα',
     image: {
       src: karkadiotissa,
-      alt: 'A landscape with olive trees.',
+      alt: 'A pastel painting of a landscape with olive trees in Karkadiotissa village.',
     },
     description: {
       dimensions: '42x29.7cm',
@@ -61,36 +66,62 @@ export const ARTWORKS = [
   },
   {
     id: '3',
-    title: 'Δέτης',
+    title: 'Cloud dancers',
     image: {
-      src: detis,
-      alt: 'The sun setting behind snow-capped peaks of majestic mountains.',
+      src: dancers,
+      alt: 'A pastel painting of a landscape and two clouds in a human shape.',
     },
     description: {
-      dimensions: '50x35cm',
+      dimensions: '42x29.7cm',
       materials: 'Soft pastels',
       date: '24 Feb 2020'
     }
   },
   {
     id: '4',
-    title: 'Dreemland',
+    title: 'Καστρί',
     image: {
-      src: dream,
-      alt: 'Pristine white sand and turquoise waters of a Caribbean beach.',
+      src: kastri,
+      alt: 'A pastel painting of a seascape in Kastri.',
     },
     description: {
-      dimensions: '50x35cm',
+      dimensions: '42x29.7cm',
       materials: 'Soft pastels',
-      date: '2000'
+      date: '1 Jun 2021'
     }
   },
   {
     id: '5',
+    title: 'Moody medow',
+    image: {
+      src: moody,
+      alt: 'A pastel painting of a landscape with a moody medow.',
+    },
+    description: {
+      dimensions: '42x29.7cm',
+      materials: 'Soft pastels',
+      date: '7 Nov 2024'
+    }
+  },
+  {
+    id: '6',
+    title: 'Dreemland',
+    image: {
+      src: dream,
+      alt: 'A pastel painting of a landscape.',
+    },
+    description: {
+      dimensions: '50x35cm',
+      materials: 'Soft pastels',
+      date: '22 Oct 2023'
+    }
+  },
+  {
+    id: '7',
     title: 'Ruins and roses',
     image: {
       src: ruinsImg,
-      alt: 'A painting of red roses within ruins.',
+      alt: 'A pastel painting of red roses within ruins.',
     },
     description: {
       dimensions: '50x35cm',
@@ -99,22 +130,23 @@ export const ARTWORKS = [
     }
   },
   {
-    id: '6',
-    title: 'Gate',
+    id: '8',
+    title: 'Δέτης',
     image: {
-      src: gate,
-      alt: 'Lush canopy of a rainforest, teeming with life.',
+      src: detis,
+      alt: 'A pastel painting of a landscape with trees and mountains.',
     },
     description: {
       dimensions: '50x35cm',
       materials: 'Soft pastels',
-      date: '13 Nov 2020'
-    },
+      date: '24 Feb 2020'
+    }
   },
+  
   
  
   {
-    id: '7',
+    id: '9',
     title: 'Μαύρη κορφή',
     image: {
       src: mavriKorfi,
@@ -126,32 +158,7 @@ export const ARTWORKS = [
       date: '1 Apr 2020'
     }
   },
-  {
-    id: '8',
-    title: 'Μέση',
-    image: {
-      src: mesi,
-      alt: 'Charming streets of Paris with historic buildings and cafes.',
-    },
-    description: {
-      dimensions: '50x35cm',
-      materials: 'Soft pastels',
-      date: '13 Dec 2020'
-    }
-  },
-  {
-    id: '9',
-    title: 'Sunset',
-    image: {
-      src: sunset,
-      alt: 'Expansive view of the deep gorges and ridges of the Grand Canyon.',
-    },
-    description: {
-      dimensions: '42x29.7cm',
-      materials: 'Soft pastels',
-      date: '24 Jun 2020'
-    }
-  },
+  
   {
     id: '10',
     title: 'Αγκινάρες',
@@ -201,11 +208,76 @@ export const ARTWORKS = [
     description: {
       dimensions: '50x35cm',
       materials: 'Soft pastels',
-      date: 2000
+      date: '2000'
     }
   },
   {
     id: '14',
+    title: 'Παραλία Καστρί-Βίγλα',
+    image: {
+      src: vigla,
+      alt: 'A pastel paint of a beach.',
+    },
+    description: {
+      dimensions: '50x35cm',
+      materials: 'Soft pastels',
+      date: 'Jul 2021'
+    }
+  },
+  {
+    id: '15',
+    title: 'Μέση',
+    image: {
+      src: mesi,
+      alt: 'A pastel painting of a landscape with olive trees and clouds.',
+    },
+    description: {
+      dimensions: '42x32cm',
+      materials: 'Soft pastels',
+      date: '13 Dec 2020'
+    }
+  },
+  {
+    id: '16',
+    title: 'Sunset',
+    image: {
+      src: sunset,
+      alt: 'A pastel painting of a landscape of a sunset.',
+    },
+    description: {
+      dimensions: '42x29.7cm',
+      materials: 'Soft pastels',
+      date: '24 Jun 2020'
+    }
+  },
+  {
+    id: '17',
+    title: 'Χρυσά στάχυα',
+    image: {
+      src: gold,
+      alt: 'A pastel painting of a landscape with golden straws.',
+    },
+    description: {
+      dimensions: '29.7x21cm',
+      materials: 'Soft pastels',
+      date: 'Mars 2020'
+    }
+  },
+  {
+    id: '18',
+    title: 'Footprints ',
+    image: {
+      src: footprints,
+      alt: 'A pastel painting of a snowy landscape.',
+    },
+    description: {
+      dimensions: '50x35cm',
+      materials: 'Soft pastels',
+      date: '2000'
+    }
+  },
+  {
+    id: '19',
     title: 'Ντία',
     image: {
       src: dia,
@@ -218,29 +290,29 @@ export const ARTWORKS = [
     }
   },
   {
-    id: '15',
-    title: 'Footprints ',
+    id: '20',
+    title: 'Autumn forest',
     image: {
-      src: footprints,
-      alt: 'The powerful cascade of Victoria Falls, a natural wonder between Zambia and Zimbabwe.',
+      src: forest,
+      alt: 'A pastel painting of a landscape .',
     },
     description: {
-      dimensions: '50x35cm',
+      dimensions: '50x30cm',
       materials: 'Soft pastels',
-      date: '2000'
+      date: '2024'
     }
   },
-  {
-    id: '16',
-    title: 'Στο νότο',
-    image: {
-      src: south,
-      alt: 'The iconic Taj Mahal reflecting in its surrounding waters during sunrise.',
-    },
-    description: {
-      dimensions: '50x35cm',
-      materials: 'Soft pastels',
-      date: '22 Nov 2020'
-    },
-  },
+  // {
+  //   id: '21',
+  //   title: 'Στο νότο',
+  //   image: {
+  //     src: south,
+  //     alt: 'The iconic Taj Mahal reflecting in its surrounding waters during sunrise.',
+  //   },
+  //   description: {
+  //     dimensions: '50x35cm',
+  //     materials: 'Soft pastels',
+  //     date: '22 Nov 2020'
+  //   },
+  // },
 ];

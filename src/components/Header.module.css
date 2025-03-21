@@ -15,7 +15,7 @@ header {
     margin: 0;
     font-size: 3rem;
     letter-spacing: 0.95rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 
    header h2 {
@@ -32,45 +32,56 @@ header {
     color: #9eb5b4;
   }
   
+  header nav{
+    display: flex;
+    flex-shrink: 1;
+    justify-content: center;
+  }
   header ul {
     display: flex;
-    gap: 5rem;
+    gap: 4rem;
     justify-content: center;
+    align-items: center;
     list-style: none;
     margin-top: 3.5rem;
-    margin-bottom: 4.5rem;
+    margin-bottom: 3.5rem;
+    
   }
 
-
+/* 
 .list {
     display: flex;
     gap: 3rem;
+    
   }
-  
+   */
   .list a {
     font-size: 1.75rem;
     padding: 0.5rem 1.5rem;
     border-radius: 4px;
     text-decoration: none;
-    color:#112a49;
+    color: hsl(161, 62%, 25%);
     
   }
   
   .list a:hover,
-  .list a:active,
-  .list a.active {
-    color: hsl(213, 61%, 40%);
-  }
-
-  .list a.active {
-    color:hsl(213, 61%, 50%);
+  .list a:active
+   {
     background-color: rgba(45, 46, 44, 0.1);
     border-bottom-left-radius: 9999px;
     border-bottom-right-radius: 9999px;
     border-top-left-radius: 9999px;
     border-top-right-radius: 9999px;
-    padding: 5 20px;
+    padding-top: 5px;
     
+    
+    color: hsl(161, 62%, 20%);
+  }
+
+  .list a.active {
+    color:  hsl(161, 62%, 15%);
+    text-decoration: none;
+    text-shadow: 2px 3px 8px;
 }
     
   

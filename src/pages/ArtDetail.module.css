@@ -9,34 +9,38 @@
     width: 680px;
     border: 40px solid  rgb(214, 214, 199);
     border-radius: 0px;
-    outline: 10px solid rgb(44, 34, 30);
+    outline: 10px solid hsl(17, 19%, 15%);
     margin-bottom: 2rem;
     margin-top: 2rem;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.596);
 }
 .details h1{
     letter-spacing: .7rem;
 }
 .details h2{
-    font-size: 2rem;
-    font-weight: lighter;
+    font-size: 1.5rem;
+    letter-spacing: .5rem;
+    font-weight: 200;
     font-style: italic;
-    color:  hsl(155, 13%, 50%);
+    color:  hsl(0, 19%, 17%);
 }
 .details p{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
     margin-top: 0;
     margin-bottom: 0.5rem;
     font-size: 1rem;
-    color:  rgb(31, 44, 40);
-    box-shadow: (0 0 5px 10px rgba(0, 0, 0, 0.8));
+    color:  hsl(161, 64%, 10%);
+   
 }
 .details button{
     font-size: 1 rem;
     margin-top: 2rem;
-    background-color: hsl(158, 21%, 20%);
+    background-color: hsl(158, 87%, 12%);
     border: none;
     border-radius: 5px;
     padding: 10px 15px;
-    box-shadow: 0 0  8px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px  8px rgba(0, 0, 0);
    /* background-color: #324d43; */
 
 }
