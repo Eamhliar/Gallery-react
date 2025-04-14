@@ -12,9 +12,14 @@ function ErrorPage() {
         }}>
             <h1>An error occured!</h1>
             <motion.p
+            style={{
+                marginTop: "2rem"
+            }}
             initial={{y: 500, opacity: 0}} 
             animate={{y: 0, opacity: 1, duration: 3}}
-            >This page not found</motion.p>
+            >
+                This page not found
+            </motion.p>
         </main>
         </>
     );

@@ -8,8 +8,7 @@ export default function Footer(){
   console.log(lastUpdate);
 
     return(
-        <footer className={classes.footer}>
-            
+        <footer className={classes.footer}>      
             <p>
              Εμμανουήλ Α. Μηλιαράς © {currYear}
             </p>

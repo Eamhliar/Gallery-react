@@ -21,7 +21,13 @@ import moody from './assets/Moody medow.jpg';
 import vigla from './assets/vigla.jpg';
 import gold from './assets/Golden.jpg'
 import forest from './assets/Autumn forest.jpg';
-
+import easter from './assets/Easter.jpg';
+import ruins from './assets/Ruins.jpg';
+import fly from './assets/Fly.jpg';
+import haroupia from './assets/Xaroupia.jpg';
+import spring from './assets/spring.jpg';
+import bee from './assets/bee.jpg';
+import klima from './assets/klima.jpg';
 
 export const ARTWORKS = [
   {
@@ -260,7 +266,7 @@ export const ARTWORKS = [
     description: {
       dimensions: '29.7x21cm',
       materials: 'Soft pastels',
-      date: 'Mars 2020'
+      date: '29 Jan 2019'
     }
   },
   {
@@ -271,9 +277,9 @@ export const ARTWORKS = [
       alt: 'A pastel painting of a snowy landscape.',
     },
     description: {
-      dimensions: '50x35cm',
+      dimensions: '29.7x21cm',
       materials: 'Soft pastels',
-      date: '2000'
+      date: '23 Dec 2019'
     }
   },
   {
@@ -286,7 +292,7 @@ export const ARTWORKS = [
     description: {
       dimensions: '50x30cm',
       materials: 'Soft pastels',
-      date: '2000'
+      date: '31 Jan 2022'
     }
   },
   {
@@ -302,17 +308,121 @@ export const ARTWORKS = [
       date: '2024'
     }
   },
-  // {
-  //   id: '21',
-  //   title: 'Στο νότο',
-  //   image: {
-  //     src: south,
-  //     alt: 'The iconic Taj Mahal reflecting in its surrounding waters during sunrise.',
-  //   },
-  //   description: {
-  //     dimensions: '50x35cm',
-  //     materials: 'Soft pastels',
-  //     date: '22 Nov 2020'
-  //   },
-  // },
+  {
+    id: '21',
+    title: 'Στο νότο',
+    image: {
+      src: south,
+      alt: 'A pastel painting of south Crete landscape.',
+    },
+    description: {
+      dimensions: '50x35cm',
+      materials: 'Soft pastels',
+      date: '22 Nov 2020'
+    },
+  },
+  {
+    id: '22',
+    title: 'Easter',
+    image: {
+      src: easter,
+      alt: 'A pastel painting of a landscape on easter spring.',
+    },
+    description: {
+      dimensions: '21x29.7cm',
+      materials: 'Soft pastels',
+      date: '1 May 2024'
+    },
+  },
+  {
+    id: '23',
+    title: 'Χάλασμα στην Καρκαδιότισσα',
+    image: {
+      src: ruins,
+      alt: 'A pastel painting of a ruined house in a Crete vilagge.',
+    },
+    description: {
+      dimensions: '21x29.7cm',
+      materials: 'Soft pastels',
+      date: '3 Mar 2021'
+    },
+  },
+  {
+    id: '24',
+    title: 'Learning to fly',
+    image: {
+      src: fly,
+      alt: 'A pastel painting of a Cretan landscape.',
+    },
+    description: {
+      dimensions: '21x29.7cm',
+      materials: 'Soft pastels',
+      date: '28 Nov 2019'
+    },
+  },
+  {
+    id: '25',
+    title: 'Χαρουπιά στη Μάρθα',
+    image: {
+      src: haroupia,
+      alt: 'A pastel painting of a locust tree.',
+    },
+    description: {
+      dimensions: '21x29.7cm',
+      materials: 'Soft pastels',
+      date: '24 Μαρ 2021'
+    },
+  },
+  {
+    id: '26',
+    title: 'Ανοιξιάτικη συννεφιά',
+    image: {
+      src: spring,
+      alt: 'A pastel painting of a cloudy sping landscape.',
+    },
+    description: {
+      dimensions: '21x29.7cm',
+      materials: 'Soft pastels',
+      date: '1 Μay 2023'
+    },
+  },
+  {
+    id: '27',
+    title: 'Μέλισσα στο ηλιβασίλεμα',
+    image: {
+      src: bee,
+      alt: 'A pastel painting of a bee on a sunset.',
+    },
+    description: {
+      dimensions: '40x30cm',
+      materials: 'Soft pastels',
+      date: '21 Nov 2024'
+    },
+  },
+  {
+    id: '28',
+    title: 'Gate',
+    image: {
+      src: gate,
+      alt: 'A pastel painting of a road under a tunnel.',
+    },
+    description: {
+      dimensions: '35x27cm',
+      materials: 'Soft pastels',
+      date: '13 Nov 2020'
+    },
+  },
+  {
+    id: '29',
+    title: 'Αμπέλι',
+    image: {
+      src: klima,
+      alt: 'A pastel painting of a road under a tunnel.',
+    },
+    description: {
+      dimensions: '50x35cm',
+      materials: 'Soft pastels',
+      date: '30 Sep 2021'
+    },
+  },
 ];

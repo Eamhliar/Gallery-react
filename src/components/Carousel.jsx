@@ -11,7 +11,7 @@ import {motion, useMotionValue, useMotionValueEvent} from 'framer-motion';
 //import { div } from 'framer-motion/client';
 import { useState, useEffect } from 'react';
 //import { use } from 'framer-motion/client';
-
+import leftcrayon from '../assets/icons8-crayon-32.png'
 import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 
@@ -70,20 +70,20 @@ export default function Carousel() {
           );
         })}
         <motion.div
-         whileHover={{scale: 1.45, x:-10}}
-         whileFocus={{scale: 1.45, x:-10}}
-        
-         className={classes.carousel_arrow_left}
-         aria-label='See previous image'
-         onClick={slideLeft}>
-          <ArrowBackIosNewOutlinedIcon />
+          whileHover={{scale: 1.75, x:-15, color:'#004d2d'}}
+          whileFocus={{scale: 1.75, x:-15}} 
+          className={classes.carousel_arrow_left}
+          aria-label='See previous image'
+          onClick={slideLeft}>
+            <ArrowBackIosNewOutlinedIcon />    
+            {/* <img src={leftcrayon} alt="prev-image" /> */}
         </motion.div>
         <motion.div
-        whileHover={{scale:1.45, x:10}}
-         className={classes.carousel_arrow_right}
-           aria-label='See next image'
-         onClick={slideRight}>
-          <ArrowForwardIosOutlinedIcon />
+          whileHover={{scale:1.75, x:15, color:'#004d2d'}}
+          className={classes.carousel_arrow_right}
+          aria-label='See next image'
+          onClick={slideRight}>
+            <ArrowForwardIosOutlinedIcon />      
         </motion.div>
         <div className={classes.carousel_pagination}>
           {CAROUSEL.map((_, index) => {
@@ -96,7 +96,7 @@ export default function Carousel() {
                     : classes.pagination_dot
                 }
                 onClick={() => setImgIndex(index)}
-                aria-label={`You are at the image {index+1}`}
+                aria-label={`You are at the image ${index+1}`}
               ></div>
             );
           })}

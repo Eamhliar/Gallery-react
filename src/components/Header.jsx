@@ -19,8 +19,8 @@ export default function Header() {
       <motion.h1 
       style={{ scale: scaleTitle }}
       initial={{x: "-100vw"}}
-      animate={{x: 0, delay: 2, duration: 5.5}}
-      transition={{type: "spring", stiffness:250}}
+      animate={{x: 0, delay: 2, duration: 1}}
+      transition={{type: "spring" , stiffness:250}}
       >
         Εμμανουήλ Α. Μηλιαράς
       </motion.h1>
@@ -30,7 +30,7 @@ export default function Header() {
       animate={{x: 0, delay: 2, duration: 4.5}}
       transition={{type: "spring", stiffness:150}}
       >
-      Emmanuel Miliaras
+        Emmanuel Miliaras
       </motion.h2>
       
       <motion.nav

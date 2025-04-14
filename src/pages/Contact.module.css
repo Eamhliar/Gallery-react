@@ -2,43 +2,55 @@
 .contact{
     display: flex;
     flex-direction: column;
-    max-width: 480px;
-    color: hsl(161, 62%, 15%) ;
+    max-width: 680px;
+    min-width: 200px;
+    color: hsl(155, 100%, 10%) ;
     background-image: linear-gradient(to bottom right, #a8afaf,  #728a89 , rgb(73, 77, 75) );
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
-    margin-bottom: 2rem;
+    margin: 5rem auto;
     padding: 2rem 4rem;
-    border: 3px groove hsl(158, 21%, 20%);
+    border: 5px groove hsl(158, 21%, 20%);
     box-shadow: 8px 8px 30px black;
-    background-size: 400%;
-    animation: bg-animation 5s infinite alternate;
+    background-size: 100%;
+    animation: bg-animation 45s infinite alternate;
     position: relative;
+    background-image: url(../public/backGround2.jpg);
+    color: #a8afaf;
+    font-weight: bold;
+    backdrop-filter: blur(50px);
 }
 
 .contact h2{
-    font-weight: 500;
+   font-size: 2.5rem;
+    font-weight: 800;
     margin-bottom: 1rem;
-    text-shadow: 3px 3px 5px;
+    text-shadow: 1px 1px 5px black;
 }
  .contact p{
-    display: inline-flex;
-    padding: .5rem 2rem;
+   font-size: 1.5rem;
+    display: inline-block;
+    padding: .75rem 2rem;
     margin: 0;
+    text-shadow: 1px 1px 5px black;
  }
  .contact a{
     text-decoration: none;
-    color:  hsl(161, 62%, 15%);
+    color:  hsl(155, 100%, 10%);
+    color: #a8afaf;
+    text-shadow: 1px 1px 5px black;
  }
  .icon {
     margin-right: 1rem;
+    transform: scale(1.5);
+    color: #a8afaf;
  }
  .contact img{
     position: absolute;
     right: 20px;
     bottom: 20px;
     margin: 0%;
+    color: #a8afaf;
  }
 
 
@@ -49,5 +61,15 @@
     }
     100%{
       background-position: bottom right;
+    }
+  }
+
+  @media (max-width: 680px){
+   .contact p{
+      font-size: 1.25rem;
+       display: block;
+       text-align: center;
+       padding: .75rem 1.5rem;
+       margin: 0;
     }
   }

@@ -4,11 +4,10 @@ import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 
 function HomePage() {
-   // const navigate = useNavigate();              <-- navigate programmaticaly
-                                                   
-  //function navigateHandler() {
-  //        navigate('/artworks');
-  //    }
+   // const navigate = useNavigate();              <-- navigate programmaticaly                                          
+   // function navigateHandler() {
+   //        navigate('/artworks');}
+  
 
 
     return  (

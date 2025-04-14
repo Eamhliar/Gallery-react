@@ -1,53 +1,66 @@
 .bio {
-   max-width: 680px;
+   max-width: 60rem;
    margin: 10px auto;
    height: 100%;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   color: hsl(158, 21%, 20%);
+   color: hsl(155, 100%, 10%);
  }
- 
+ .content h3{
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: .2rem;
+ }
  .content p {
-    font-family:  'Times New Roman', Times, serif;
-    font-weight: 50;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: lighter;
     font-style: italic;
     max-width: 75%;
     margin: 0 auto;
-
  }
 
  .bio img {
-   max-height: 8rem;
-    width: 10rem;
+    max-height: 15rem;
+    width: 15rem;
     border-radius: 10%;
     object-fit: cover;
+    margin-bottom: 2rem;
     opacity: .6;
     filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.89));
-    margin-right: 20px; 
-    transition:  500ms ease-in-out;
+    transition:  750ms ease-in-out;
     transition-property: all;
  }
 
- .bio img:hover{
+ .bio img:hover, img:focus-visible{
    border-radius: 0;
-   border: #818383 10px solid;
+   border: #c7b8aa 12px solid;
    outline: #3d0707 3px solid;
    opacity: 1;
    filter: drop-shadow(0 0 8px rgba(247, 253, 253, 0.89));
  }
 
  .bio button{
-   margin: 2rem;
+  display: flex;
+  align-items: center;
+   margin: 0 auto;
    padding: .2rem .5rem;
-   color: hsl(158, 21%, 20%);
+   color: var(--dark-clr);
+   font-size: 1rem;
    background-color: transparent;
-   border: 1 px solid hsl(158, 21%, 20%);
+   border:  2px solid var(--dark-clr);
    border-radius: 20px;
    cursor: pointer;
  }
 
  .bio button:hover{
-   background-color: #979b9b;
+   background-color: var(--dark-clr);
+   color: var(--text-clr);
+ }
+
+ @keyframes cursor {
+  50% { border-color: transparent;}
  }
