@@ -1,7 +1,10 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,700&family=Raleway:wght@400;700&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,700&family=Raleway:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Handjet:wght@400;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Murecho:wght@100..900&family=Vast+Shadow&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
 
 * {
   box-sizing: border-box;
@@ -15,8 +18,8 @@
 
 
 html {
-  /*font-family: 'Bricolage Grotesque', sans-serif;*/
-  font-family: 'Quicksand', sans-serif;
+  font-family:  "Jura", sans-serif;
+  /* font-family: 'Quicksand', sans-serif; */
   /* font-family: "Murecho", serif; */
   line-height: 1.5;
 
@@ -36,11 +39,11 @@ body {
   margin: 0;
   padding: 2rem;
   padding-bottom: .5rem;
-  background-image: linear-gradient(to bottom right, #afb1b1,  #808585 , rgb(83, 90, 88) );
+  background-image: linear-gradient(to bottom right, #a4a5a4,  #808584 , rgb(65, 71, 70) );
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 400%;
-  animation: bg-animation 25s infinite alternate;
+  animation: bg-animation 20s infinite alternate;
   /* background-image: url(../public/backGround2.jpg); */
 }
 

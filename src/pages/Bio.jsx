@@ -67,15 +67,15 @@ export default function Bio(){
               style={{
                 opacity: opacityText,
                 scale: scaleText,
-                transition: 'linear .75s'
+                transition: 'linear .5s'
               }}
             >
                 <button 
-            onClick={handleClick}
+            onClick={ handleClick }
             >
-                {lang}  &#11177;
+                { lang }  &#11177;
             </button>
-            {content}
+            { content }
             </motion.div>    
             
            

@@ -4,11 +4,13 @@ import { ARTWORKS } from "../imgData";
 import { motion } from 'framer-motion'
 import classes from './ArtDetail.module.css';
 import palete from '../assets/palete.png';
+import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
+import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 
 
 function ArtDetail() {
     const params = useParams();
-    const currId = params.artId;
+    const currId = Number(params.artId);
     const currArtwork = ARTWORKS[currId];
 
     const[borderColor, setBorderColor] = useState("#d6d6c7");
@@ -24,29 +26,53 @@ function ArtDetail() {
     function handleBorderChange(event) {
         setBorder(event.target.value);
     }
-
+   
     return (
         <>
             <div className={classes.details} >
              
                  <div className={classes.infos} >
-                 <h2> About this artwork: </h2>
-                 <p> Τίτλος: {`"${currArtwork.title}"`} </p>
-                 <p> Διαστάσεις: {currArtwork.description.dimensions} </p>
-                 <p> Υλικά: {currArtwork.description.materials} </p>
-                 <p> Ημερομηνία: {currArtwork.description.date} </p>
+                 <h2> Σχετικά με το έργο- < br/>  About this artwork: </h2>
+                 <p> Τίτλος-(Title): {`"${currArtwork.title}"`} </p>
+                 <p> Διαστάσεις-Dimentions: {currArtwork.description.dimensions} </p>
+                 <p> Υλικά-Materials: {currArtwork.description.materials} </p>
+                 <p> Ημερομηνία-Date: {currArtwork.description.date} </p>
                  </div>
-                 <img 
+
+                 <div className={classes.details_img}>
+                    <img 
                      src={currArtwork.image.src} 
                      alt={currArtwork.image.alt}
                      style={{
                         border:`${border}px solid ${borderColor}`,
-                        outline:`12px solid ${outColor}`,
+                        outline:`15px solid ${outColor}`,
                         transition: "250ms ease"
                      }} 
-                 />
+                    />
+                    { currId > 0 && 
+                     <motion.div
+                      whileHover={{scale: 1.25, x:-5, backgroundColor:'#004d2d'}}
+                      whileFocus={{scale: 1.25, x:-5}} 
+                      className={classes.details_arrow_left}
+                      aria-label='See previous artwork'
+                     >
+                        { currId > 0 &&  <Link to={`/artworks/${currId - 1}`} > <ArrowBackIosNewOutlinedIcon /> </Link>}
+                       
+                      {/* <img src={leftcrayon} alt="prev-image" /> */}
+                     </motion.div>}
+                   { currId !== ARTWORKS.length-1 && 
+                     <motion.div
+                      whileHover={{scale:1.25, x:5, backgroundColor:'#004d2d'}}
+                      className={classes.details_arrow_right}
+                      aria-label='See next artwork'
+                     >
+                     { currId < ARTWORKS.length-1 && <Link to={`/artworks/${currId + 1}`} > <ArrowForwardIosOutlinedIcon /> </Link>}
+                            
+                    </motion.div>}
+                 </div>
+                
                   <details>
-                    <summary><h2>Create your own frame <img src={palete} alt="" /></h2></summary>
+                    <summary><h2> Create your own frame <img src={palete} alt="" /></h2></summary>
                         <div className={classes.colorPickerContainer}>
                              <label htmlFor=""> Select border color:</label>
                              <input type="color" value={borderColor} onChange={handleColorBorderChange} />
@@ -63,6 +89,7 @@ function ArtDetail() {
                    <motion.button
                     whileHover={{ scale:1.1, backgroundColor:'#004d2d' }}
                     transition={{ type: 'spring', stiffness: 200, mass: 1}}
+                    className={classes.bottom_btn}
                    >
                        <Link to=".." relative="path">Back</Link> 
                    </motion.button>

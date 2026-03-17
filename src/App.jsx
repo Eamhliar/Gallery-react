@@ -1,4 +1,4 @@
-import React, {lazy, Suspense} from 'react';
+import { lazy, Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ArtDetail from './pages/ArtDetail';
 //import Artworks from './pages/Artworks';
